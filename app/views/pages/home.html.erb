@@ -1,5 +1,21 @@
-<h2>Herro World</h2>
-
-<p>
-  <%= Time.now %>
-</p>
+<div id="text-box">
+  <%= text_field_tag(:message) %>
+  <input type="submit" name="submit" value="submit">
+</div>
+<div class="controls hide">
+  <label>
+    <input id="gauges" type="checkbox">
+    <span>Gauges</span>
+  </label>
+  <label>
+    <input id="night" type="checkbox">
+    <span>Night</span>
+  </label>
+</div>
+<div class="clock"></div>
+<div class="help hidden">
+  <p>
+    Scroll up to change settings
+  </p>
+</div>
+<div class="day hide"></div><div class="night hide"></div>
