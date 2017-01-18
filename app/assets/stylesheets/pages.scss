@@ -20,10 +20,12 @@ html {
   color: #E04; /* inverse of desired color! */
   background-color: #111;
 }
-#text-box {
+#message {
   margin:0 auto;
   text-align:center;
   margin:15px;
+  width:300px;
+  border-radius:3px;
 }
 .controls {
   display: flex;
@@ -75,8 +77,8 @@ html {
   position: absolute;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 100%;
-  width: 100%;
+  height: 600px;
+  width: 600px;
 }
 body {
   min-height: 100%;

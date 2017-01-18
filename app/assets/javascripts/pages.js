@@ -284,24 +284,27 @@ function Now() {
 function zeroPad (num, width) {
   return (new Array(width).fill("0").join("") + num).substr(0-width)
 }
-
-function showHelp() {
-  helpEl.classList.remove("hidden");
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function hideHelp() {
-  helpEl.classList.add("hidden");
-}
 function toVoice(phrase) {
-  var msg = new SpeechSynthesisUtterance(phrase);
-  window.speechSynthesis.speak(msg);
+  var voices = speechSynthesis.getVoices().filter(voice => voice.lang === "en-US");
+  voices.forEach(voice => {
+      let newPhrase = `${voice.name} ${phrase}`;
+      console.log(newPhrase);
+      var msg = new SpeechSynthesisUtterance(newPhrase);
+      msg.voice = voice;
+      speechSynthesis.speak(msg);
+      sleep(500);
+  });
 }
 
 $(function(){
     var s = new Surface();
-    var helpEl = document.querySelector(".help");
     s.init();
-    document.addEventListener('click', function(e) {
+    var submitButton = document.querySelector("#tts-submit");
+    submitButton.addEventListener('click', function(e) {
         e.preventDefault();
         var msg = document.querySelector("#message").value;
         toVoice(msg);
