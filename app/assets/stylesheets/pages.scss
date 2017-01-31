@@ -1,125 +1,124 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Audiowide", monospace;
+}
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font: inherit;
-  line-height: inherit;
-}
-html {
-  font-family: "Source Code Pro","Courier New", monospace;
-  font-weight: 500;
-}
-.day {
-  color: #E11;
-}
-.night {
-  color: #E04; /* inverse of desired color! */
-  background-color: #111;
-}
-#message {
-  margin:0 auto;
-  text-align:center;
-  margin:15px;
-  width:300px;
-  border-radius:3px;
-}
-.controls {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: stretch;
-  justify-content: space-around;
-}
-.controls input {
-  opacity: 0;
-  position: absolute;
-}
-.controls label {
-  cursor: pointer;
-  flex: 1;
-  line-height: 2;
-  text-align: center;
-  -moz-user-select: none;
-  user-select: none;
-}
-.controls span:hover {
-  color: #000;
-  background-color: #FFF;
-}
-.controls span {
-  background-color: #EEE;
-  box-shadow: inset 0 0 0 0.5px #AAA;
-  border-radius: 1em;
-  color: #888;
-  padding: .125em 1em;
-  -moz-user-select: none;
-  user-select: none;
-}
-.night .controls span {
-  background-color: #222;
-  color: #EEE;
-}
-.controls input:checked ~ span {
-  box-shadow: inset 0 0 0 1px #F00;
-  color: #000;
-}
-.night .controls input:checked ~ span {
-  box-shadow: inset 0 0 0 1px #1FB;
-  color: #EEE;
-}
-.night canvas {
-  filter: invert(100%);
-}
-.clock {
-  position: absolute;
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 600px;
-  width: 600px;
-}
 body {
-  min-height: 100%;
+	color: #000;
 }
 
-canvas {
+.content:before {
+	content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
   display: block;
+	background:  linear-gradient(
+      rgba(255, 235, 0, 0.9),
+      rgba(255, 235, 0, 0.9)
+    ),url('bg.png');
+  display: block;
+	width: 100%;
+  height: 100%;
+	-webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 
-.help {
-  background-color: rgba(0, 0, 0, .05);
-  border-radius: .5rem;
-  width: auto;
-  min-width: 0;
-  max-width: 24em;
-  margin: 0 auto;
-  text-align: center;
-  transition: opacity 1s ease-out;
-  padding: .5rem 1rem;
-  position: relative;
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-.help::after,
-.help::before {
-  font-size: 1.25rem;
-  content: '\2191';
-  position: absolute;
-  top: 0.125rem;
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+	padding: 0 10px;
 }
-.help::before {
-  left: .75rem;
+
+/* ================= */
+/* Header tag setup  */
+/* ================= */
+
+header h1, header p {
+	text-align: center;
 }
-.help::after {
-  right: .75rem;
+
+/* ======================== */
+/* Interval Timer Controls  */
+/* ======================== */
+
+.settings-box {
+	margin: 2em 0;
+	padding: 10px 0;
+	border: 3px solid white;
+	border-radius: 10px
 }
-.night .help {
-  background-color: rgba(255, 255, 255, .05);
-  color: #EEE;
+
+.settings-box > .row {
+	margin-bottom: 1em;
 }
-.help.hidden {
-  opacity: 0;
+
+.row.text-center > div {
+	display: inline-block;
+	float: none;
 }
-.hide {
-  display: none;
+
+.setting-label {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.plus, .minus {
+	display: inline;
+	padding: 0 1em;
+	border: 1px solid #fdfdfd;
+	border-radius: 10px;
+}
+
+#timer-warm, #timer-cool, #timer-work, #timer-rest, #number-set, #total-time {
+	background: none;
+	border: none;
+	margin: 0 10px;
+	text-align: center;
+	width: 4.2em;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+#number-set {
+	width: 1.5em;
+}
+
+#start-button, #stop-button, #reset-button {
+	color: #333;
+}
+
+/* =============== */
+/* Interval Timer  */
+/* =============== */
+
+svg {
+	width: 100%;
+	margin: 0 auto;
+}
+.text-center div {
+	border:1px solid black;
+	border-radius: 10px;
+
 }
