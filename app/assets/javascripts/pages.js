@@ -637,20 +637,11 @@ function startClock(time){
 }
 
 $(function(){
-    var s = new Surface();
-    s.init();
     var ttsSubmit = document.querySelector("#tts-submit");
-    var timeSubmit = document.querySelector("#time-submit");
 
     ttsSubmit.addEventListener('click', function(e) {
         e.preventDefault();
         var msg = document.querySelector("#message").value;
         toVoice(msg);
     });
-
-    timeSubmit.addEventListener('click', (e) => {
-        e.preventDefault();
-        var time = document.querySelector("#time").value;
-        startClock(time);
-    })
 });
