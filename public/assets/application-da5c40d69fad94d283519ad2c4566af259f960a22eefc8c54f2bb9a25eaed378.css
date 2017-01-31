@@ -1,0 +1,146 @@
+/* line 4, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Audiowide", monospace;
+}
+
+/* line 10, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+body {
+  color: #000;
+}
+
+/* line 14, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+.content:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background: linear-gradient(rgba(255, 235, 0, 0.9), rgba(255, 235, 0, 0.9)), url("bg.png");
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+/* line 35, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* line 44, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* ================= */
+/* Header tag setup  */
+/* ================= */
+/* line 54, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+header h1, header p {
+  text-align: center;
+}
+
+/* ======================== */
+/* Interval Timer Controls  */
+/* ======================== */
+/* line 62, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+.settings-box {
+  margin: 2em 0;
+  padding: 10px 0;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+/* line 69, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+.settings-box > .row {
+  margin-bottom: 1em;
+}
+
+/* line 73, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+.row.text-center > div {
+  display: inline-block;
+  float: none;
+}
+
+/* line 78, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+.setting-label {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* line 83, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+.plus, .minus {
+  display: inline;
+  padding: 0 1em;
+  border: 1px solid #fdfdfd;
+  border-radius: 10px;
+}
+
+/* line 90, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+#timer-warm, #timer-cool, #timer-work, #timer-rest, #number-set, #total-time {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  text-align: center;
+  width: 4.2em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* line 104, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+#number-set {
+  width: 1.5em;
+}
+
+/* line 108, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+#start-button, #stop-button, #reset-button {
+  color: #333;
+}
+
+/* =============== */
+/* Interval Timer  */
+/* =============== */
+/* line 116, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+svg {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 120, /Users/zb/Projects/rfr/app/assets/stylesheets/pages.scss */
+.text-center div {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
